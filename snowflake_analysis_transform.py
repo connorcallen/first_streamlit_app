@@ -10,5 +10,6 @@ my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from GREYLEDGE_DATA_CLOUD__TREATMENT_HEMOANALYSIS_VALUES")
 analysis_data = my_cur.fetchall()
 df=streamlit.dataframe(analysis_data)
-df
+print(df.columns)
+
  
