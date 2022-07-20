@@ -11,5 +11,5 @@ my_cur.execute("SELECT * from GREYLEDGE_DATA_CLOUD__TREATMENT_HEMOANALYSIS_VALUE
 analysis_data = my_cur.fetchall()
 df=streamlit.dataframe(analysis_data)
 streamlit.text(df.columns)
-
+streamlit.text(df.columns())
  
