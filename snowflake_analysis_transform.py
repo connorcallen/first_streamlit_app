@@ -5,7 +5,7 @@ import snowflake.connector
 from urllib.error import URLError
 
 streamlit.title('Data transformation for hemo values in snowflake')
-
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur=my_cnx.cursor()
 df=my_cur.execute("select * from STITCH.STITCH2_INTEGRATION.GREYLEDGE_DATA_CLOUD__TREATMENT_HEMOANALYSIS_VALUES")
 df=streamlit.dataframe(df)
